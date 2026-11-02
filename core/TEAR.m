@@ -32,7 +32,7 @@ graph = struct('B', B, 'K', K, 'R', R, 'o', o);
 
 % 4. Alternating optimization
 problem = struct('X', {X_cell}, 'dims', dims, 'numBase', v, 'n', n, 'd', d, 'l', l);
-solverOpts = struct('lambda', lambda, 'maxIter', 200, 'tol', 1e-3, 'initSeed', solverSeed);
+solverOpts = struct('lambda', lambda, 'maxIter', 50, 'tol', 1e-2, 'initSeed', solverSeed);
 model = solver_TEAR(problem, graph, solverOpts);
 
 % 5. Label extraction
